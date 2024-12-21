@@ -18,6 +18,8 @@ def get_book_report(book_path):
     dict_list.sort(reverse=True, key=sort_on)
 
     for local_dict in dict_list:
+        if not local_dict["char"].isalpha():
+            continue
         print(f"The {local_dict["char"]} character was found {local_dict["num"]} times")
 
     print("--- End report ---")
