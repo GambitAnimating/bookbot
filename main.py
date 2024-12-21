@@ -1,15 +1,15 @@
 def main():
     book_path = "books/frankenstein.txt"
-    book_text = get_book_text(book_path)
-    get_book_report(book_text)
+    get_book_report(book_path)
 
 def sort_on(dict):
     return dict["num"]
 
-def get_book_report(book_text):
+def get_book_report(book_path):
+    book_text = get_book_text(book_path)
     num_words = get_num_words(book_text)
     num_characters_dict = get_num_characters(book_text)
-    print("--- Begin report of books/frankenstein.txt ---")
+    print(f"--- Begin report of {book_path} ---")
     print (f"{num_words} words found in the document")
     dict_list = []
     for char in num_characters_dict:
